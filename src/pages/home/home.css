@@ -1,0 +1,33 @@
+.category-container {
+    margin: 2rem 5rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.card-action{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    color: var(--black-color);
+}
+
+.card-header:hover {
+    background-color: var(--secondary-light);
+}
+
+.card-btn:hover{
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+@media screen and (max-width: 750px) {
+    .category-container {
+        margin: 2rem;
+    }
+    .category-item {
+        justify-self: center;
+    }
+}
