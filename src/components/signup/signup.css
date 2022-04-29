@@ -17,7 +17,7 @@
 }
 
 .signup-section .user-account-link{
-    color: var(--contrast-color);
+    color: var(--primary-color);
 }
 
 input[type="number"] {

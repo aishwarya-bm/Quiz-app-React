@@ -18,13 +18,13 @@
 }
 
 .option-item {
-    color: white;
+    /* color: white; */
     margin: 1rem;
     width: 15rem;
     padding: 1rem;
     box-shadow: none;
     cursor: pointer;
-    border: 1px solid var(--contrast-light);
+    border: 1px solid var(--info-txt);
     border-radius: 1rem;
 }
 
