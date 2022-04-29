@@ -16,8 +16,8 @@ export function Home() {
 
             <div className="children-stacked-center">
               <div className="banner-caption">
-                Want to have fun at
-                <span className="banner-title">QuizGenie</span>?
+                Want to have fun at&nbsp;
+                <span className="banner-title"> QuizGenie</span>?
               </div>
               <div className="banner-caption">
                 Take a Quiz and Enjoy learning with Fun
