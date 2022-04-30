@@ -7,9 +7,6 @@
 
 .category-container .card {
     transition: 0.5s all ease-in-out;
-    background-color: transparent;
-    box-shadow: none;
-    box-shadow: 0 0 12px var(--info-txt);
 }
 
 .category-container .card:hover {

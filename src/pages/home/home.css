@@ -1,5 +1,6 @@
 .home-img{
-    height: 85vh;
+    height: 80vh;
+    width: auto;
 }
 
 .home-banner{
@@ -21,6 +22,9 @@
 }
 @media screen and (max-width: 750px) {
     .home-banner {
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+    .home-img{
+        height: auto;
     }
 }

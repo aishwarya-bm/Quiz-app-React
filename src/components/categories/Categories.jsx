@@ -29,8 +29,8 @@ export function Categories() {
               categories?.map(({ _id, categoryName, categoryImg }) => {
                 return (
                   <li key={_id}>
-                    <div className="card children-stacked" onClick={() => {}}>
-                      <Link to={`/explore/${categoryName}`}>
+                    <div className="card children-stacked">
+                      <Link to={`/category/${_id}`}>
                         <img
                           className="card-media"
                           src={categoryImg}
@@ -40,7 +40,7 @@ export function Categories() {
 
                       <div className="card-action">
                         <Link
-                          to={`/explore/${categoryName}`}
+                          to={`/category/${_id}`}
                           style={{ color: "white" }}
                           className="btn-component btn-title card-btn text-center"
                         >
