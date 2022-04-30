@@ -1,33 +1,26 @@
-.category-container {
-    margin: 2rem 5rem;
-    gap: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+.home-img{
+    height: 85vh;
 }
 
-.card-action{
-    display: flex;
-    justify-content: space-around;
+.home-banner{
+    margin: 1rem 0;
 }
 
-.card {
-    color: var(--black-color);
+.banner-title{
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-family: 'Dancing Script';
 }
 
-.card-header:hover {
-    background-color: var(--secondary-light);
+.banner-caption{
+    font-size: 1.5rem;
+    font-family: 'Dancing Script';
 }
-
-.card-btn:hover{
-    background-color: var(--secondary-color);
-    color: var(--white-color);
+.btn-explore{
+    margin-top: 1rem;
 }
-
 @media screen and (max-width: 750px) {
-    .category-container {
-        margin: 2rem;
-    }
-    .category-item {
-        justify-self: center;
+    .home-banner {
+        flex-direction: column-reverse;
     }
 }

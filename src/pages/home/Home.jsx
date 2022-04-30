@@ -1,18 +1,39 @@
-import { Header } from "components";
+import { Categories, Header } from "components";
 import "./home.css";
+import banner from "assets/banner1.png";
+import { useRef } from "react";
 
 export function Home() {
+  const categoryRef = useRef(null);
+  const executeScroll = () => categoryRef.current.scrollIntoView();
   return (
     <>
       <div className="page-container">
         <Header />
-        <main>
-          <h4 className="page-heading text-center">Choose a category</h4>
-          <ul className="category-container list-no-bullet">
-            <li className="list-item category-item">
-              <div></div>
-            </li>
-          </ul>
+        <main className="home-main">
+          <div className="children-center home-banner grid-gap">
+            <img className="home-img" alt="banner" src={banner} />
+
+            <div className="children-stacked-center">
+              <div className="banner-caption">
+                Want to have fun at&nbsp;
+                <span className="banner-title"> QuizGenie</span>?
+              </div>
+              <div className="banner-caption">
+                Take a Quiz and Enjoy learning with Fun
+              </div>
+              <button
+                className="btn btn-primary btn-explore"
+                onClick={executeScroll}
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+
+          <section ref={categoryRef}>
+            <Categories />
+          </section>
         </main>
       </div>
     </>

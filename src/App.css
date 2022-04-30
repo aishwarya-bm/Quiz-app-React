@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 body{
     background-color: var(--black-color);
@@ -17,7 +18,6 @@ body{
 .intro-container {
     padding: 1rem 1rem 3rem 1rem;
     background-color: var(--doc-bg);
-    color: var(--contrast-color);
     border-radius: 1rem;
 }
 
@@ -27,21 +27,6 @@ body{
     margin: 0.5rem;
 }
 
-.page-heading {
-    color: var(--contrast-light);
-}
-
-.nav-container{
-    color: var(--contrast-color);
-    background-color: var(--black-color);
-    border-bottom: 1px solid;
-}
-
-.nav-container .nav-pills ul li a {
-    color: var(--contrast-color);
-}
-
-.nav-container .nav-pills ul li a:hover {
-    background-color: var(--secondary-color);
-    color: var(--white-color);
+.btn{
+    box-shadow: none;
 }
