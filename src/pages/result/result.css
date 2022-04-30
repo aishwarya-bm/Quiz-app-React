@@ -12,10 +12,5 @@
     width: fit-content;
     align-self: center;
     font-size: 1.25rem;
-    /* background-color: var(--contrast-color); */
-    /* color: var(--black-color); */
 }
 
-.btn-playmore:hover {
-    /* background-color: var(--contrast-light); */
-}
