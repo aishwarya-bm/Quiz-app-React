@@ -4,8 +4,8 @@ import banner from "assets/banner1.png";
 import { useRef } from "react";
 
 export function Home() {
-  const myRef = useRef(null);
-  const executeScroll = () => myRef.current.scrollIntoView();
+  const categoryRef = useRef(null);
+  const executeScroll = () => categoryRef.current.scrollIntoView();
   return (
     <>
       <div className="page-container">
@@ -31,7 +31,7 @@ export function Home() {
             </div>
           </div>
 
-          <section ref={myRef}>
+          <section ref={categoryRef}>
             <Categories />
           </section>
         </main>
