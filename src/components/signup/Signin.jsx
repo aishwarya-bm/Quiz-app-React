@@ -1,4 +1,7 @@
+import { useLogin } from "contexts";
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { loginUser } from "utils";
 import "./signup.css";
 export function Signin({ setIsSignUp }) {
   const [showPassword, setShowPassword] = useState(false);
@@ -6,9 +9,17 @@ export function Signin({ setIsSignUp }) {
     email: "",
     password: "",
   });
+  const { dispatchUser } = useLogin();
+  const navigate = useNavigate();
+  const location = useLocation()
 
   const changeHandler = event => {
     event.preventDefault();
+    const { target } = event;
+    setLoginForm(() => ({
+      ...loginForm,
+      [target.name]: target.value,
+    }));
   };
 
   const toggleShowPassword = e => {
@@ -18,10 +29,17 @@ export function Signin({ setIsSignUp }) {
 
   const handleLoginSubmit = e => {
     e.preventDefault();
+    loginUser(loginForm, dispatchUser, navigate,location);
   };
 
   const handleTestLogin = e => {
     e.preventDefault();
+    loginUser(
+      { email: "test@gmail.com", password: "test" },
+      dispatchUser,
+      navigate,
+      location
+    );
   };
 
   return (
@@ -81,7 +99,9 @@ export function Signin({ setIsSignUp }) {
           className="btn btn-link user-account-link"
           onClick={e => handleTestLogin(e)}
         >
-          <span className="gray-text"> Login with test credentials</span>
+          <span>
+            <u> Login with test credentials</u>
+          </span>
         </button>
         <button
           className="btn btn-link user-account-link"

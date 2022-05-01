@@ -47,7 +47,7 @@ export function Categories() {
                           {categoryName}
                         </Link>
                         <button
-                          class="fa fa-share-alt btn btn-link card-btn"
+                          className="fa fa-share-alt btn btn-link card-btn"
                           aria-hidden="true"
                         ></button>
                       </div>

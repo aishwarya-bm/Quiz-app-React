@@ -3,7 +3,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export function Toast({ message, type }) {
   return toast(message, {
-    position: "top-right",
+    position: "bottom-right",
     autoClose: 3000,
     type: type,
     transition: Slide,

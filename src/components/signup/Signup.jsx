@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useLogin } from "contexts";
+import { createUser } from "utils";
 import "./signup.css";
 
 export function Signup({ setIsSignUp }) {
@@ -7,16 +10,22 @@ export function Signup({ setIsSignUp }) {
     lastname: "",
     email: "",
     password: "",
-    mobile: "",
   });
   const [showPassword, setShowPassword] = useState(false);
   const [userErr, setUserErr] = useState({
-    phone: "",
     email: "",
   });
+  const navigate = useNavigate();
+  const location = useLocation()
+  const { dispatchUser } = useLogin();
 
   const changeHandler = event => {
     event.preventDefault();
+    const { target } = event;
+    setSignupForm(() => ({
+      ...signupForm,
+      [target.name]: target.value,
+    }));
   };
 
   const toggleShowPassword = e => {
@@ -26,6 +35,7 @@ export function Signup({ setIsSignUp }) {
 
   const handleSignupSubmit = e => {
     e.preventDefault();
+    createUser(signupForm, setUserErr, setSignupForm, dispatchUser, navigate,location);
   };
 
   return (
@@ -108,24 +118,6 @@ export function Signup({ setIsSignUp }) {
                 style={{ position: "absolute", right: "0px", top: "20px" }}
                 onClick={e => toggleShowPassword(e)}
               ></button>
-            )}
-          </div>
-          <div className="d-grid">
-            <label>
-              Mobile
-              <span style={{ color: "red" }}>*</span>
-            </label>
-            <input
-              required
-              type="number"
-              placeholder="enter your mobile number"
-              name="mobile"
-              value={signupForm.mobile}
-              onChange={e => changeHandler(e)}
-            />
-
-            {userErr.phone && (
-              <div className="error-message">{userErr.phone} </div>
             )}
           </div>
 

@@ -8,3 +8,4 @@ export { Signin } from "./signup/Signin";
 export { Toast } from "./toast/Toast";
 export { RulesModal } from "./rules-modal/RulesModal";
 export { Button } from "./button/Button";
+export { RequiresAuth } from "./requiresAuth/RequiresAuth";

@@ -6,8 +6,8 @@ export function Rules() {
   return (
     <>
       <Header />
-      <h4 class="text-center page-heading">Rules for the game</h4>
-      <div class="rules-container">
+      <h4 class="text-center page-heading">Game rules</h4>
+      <div class="rules-container children-stacked-center">
         <ul class="list-numbered rules-list">
           <li class="list-item">Each level has 5 questions.</li>
           <li class="list-item">No points are deducted for wrong answers.</li>
