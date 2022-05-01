@@ -35,3 +35,7 @@ body{
     background-color: transparent;
         box-shadow: 0 0 12px var(--info-txt);
 }
+
+.not-found{
+    margin-top: 5rem;
+}

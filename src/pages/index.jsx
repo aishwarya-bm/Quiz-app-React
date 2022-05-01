@@ -6,3 +6,4 @@ export { Quiz } from "./quiz/Quiz";
 export { Login } from "./login/Login";
 export { Profile } from "./profile/Profile";
 export { CategoryLevel } from "./categoryLevel/CategoryLevel";
+export { Error } from "./error/Error";
