@@ -1,0 +1,22 @@
+.category-level-container{
+    height: 85vh;
+    justify-content: center;
+}
+
+.category-level .card{
+    width: unset;
+    box-shadow: none;
+}
+
+.card-label{
+    padding: .5rem;
+}
+
+@media screen and (max-width:700px) {
+    .category-level {
+        flex-wrap: wrap;
+    }
+    .category-level-container{
+        height: unset;
+    }
+}

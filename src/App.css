@@ -30,3 +30,8 @@ body{
 .btn{
     box-shadow: none;
 }
+
+.card{
+    background-color: transparent;
+        box-shadow: 0 0 12px var(--info-txt);
+}
